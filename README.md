@@ -11,7 +11,7 @@
 
 **An AI-powered Indian legal assistant that provides instant, accurate legal guidance — available 24/7, for everyone.**
 
-[🚀 Live Demo](#) · [📖 Docs](#) · [🐛 Report Bug](../../issues) · [✨ Request Feature](../../issues)
+[🚀 Live Demo](https://legal-assistant-fromshakeel.streamlit.app/) · [📖 Docs](#) · [🐛 Report Bug](../../issues) · [✨ Request Feature](../../issues)
 
 </div>
 
