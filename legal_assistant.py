@@ -6,7 +6,14 @@ import random
 import time
 
 # ── Must be first Streamlit command ──────────────────────────────────────────
-st.set_page_config(page_title="Legal Assistant Chatbot", page_icon="⚖️")
+st.set_page_config(
+    page_title="LexAI — Indian Legal Assistant",
+    page_icon="⚖️",
+    layout="centered",
+    menu_items={
+        'About': "**LexAI** — AI-powered Indian Legal Assistant built with Groq & LLaMA 3.3 70B"
+    }
+)
 
 # ── Load environment variables ────────────────────────────────────────────────
 load_dotenv()
@@ -50,8 +57,17 @@ def get_groq_response(messages: list, max_retries: int = 3):
                 raise e
 
 # ── UI ────────────────────────────────────────────────────────────────────────
-st.title("⚖️ Legal Assistant Chatbot")
-st.caption("Powered by Groq · LLaMA 3.3 70B · For informational purposes only")
+st.markdown("""
+    <h1 style='text-align: center; background: linear-gradient(90deg, #7B2FBE, #4A90D9);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    font-size: 3rem; font-weight: 800;'>
+    ⚖️ LexAI
+    </h1>
+    <p style='text-align: center; color: gray; font-size: 0.9rem;'>
+    🇮🇳 Indian Legal Assistant · Powered by Groq ⚡ · LLaMA 3.3 70B · For informational purposes only
+    </p>
+    <hr>
+""", unsafe_allow_html=True)
 
 # ── Session state ─────────────────────────────────────────────────────────────
 if "messages" not in st.session_state:
